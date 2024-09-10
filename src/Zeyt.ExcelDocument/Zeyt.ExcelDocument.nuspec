@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>Zeyt.ExcelDocument</id>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 		<authors>zeytdev</authors>
 		<owners>zeytdev</owners>
 		<license type="expression">MIT</license>
@@ -11,7 +11,12 @@
 		<description>Zeyt.ExcelDocument is a C# library that simplifies the creation of Excel documents from object lists...</description>
 		<readme>README.md</readme>
 		<releaseNotes>Initial release</releaseNotes>
-		<tags>excel, xslx, openxml, spreadxheetah, exceldocument, zeytdev</tags>
+		<tags>excel, xslx, openxml, spreadcheetah, exceldocument, zeytdev</tags>
+		<dependencies>
+			<group targetFramework=".NET6.0">
+				<dependency id="SpreadCheetah" version="1.17.0" />
+			</group>
+		</dependencies>
 	</metadata>
 	<files>
 		<file src="bin\Release\net6.0\**\*.*" target="lib\net6.0\" />
