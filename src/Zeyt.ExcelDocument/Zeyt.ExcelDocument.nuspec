@@ -1,53 +1,20 @@
 <?xml version="1.0"?>
 <package>
-  <metadata>
-    <id>Zeyt.ExcelDocument</id>
-    <version>1.0.0</version>
-    <authors>zeytdev</authors>
-    <owners>zeytdev</owners>
-    <license type="expression">MIT</license>
-    <projectUrl>https://github.com/zeytdev/Zeyt.ExcelDocument</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-
-Zeyt.ExcelDocument is a C# library that simplifies the creation of Excel documents from object lists. It provides an intuitive API to map object properties to Excel columns, allowing for custom column names, widths, and default values for null fields.
-
-Example Usage:
-```csharp
-var customerList = new List<Customer>
-{
-    new Customer { FirstName = "James", LastName = "Butt", Age = 23, Email = "james@james.com" },
-    new Customer { FirstName = "Art", LastName = "Venere", Age = 33, Email = "art@venere.com" },
-    new Customer { FirstName = "Sage", LastName = "Wieser", Age = 57, Email = null },
-    new Customer { FirstName = "Minna", LastName = "Amigon", Age = 45, Email = "minna@amigon.com" },
-    new Customer { FirstName = "Blair", LastName = "Malet", Age = 66, Email = null },
-};
-
-var customerExcelData = new ExcelDocumentWriter<Customer, CustomerExcelMap>("Customer Information").Write(customerList);
-File.WriteAllBytes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Customer.xlsx"), customerExcelData);
-```
-
-The following class defines the mapping of `Customer` properties to Excel columns:
-
-```csharp
-public class CustomerExcelMap : ExcelDocumentMap<Customer>
-{
-    public CustomerExcelMap()
-    {
-        Map(x => x.FirstName).Name("Full Name").Width(30).WriteUsing(x => $"{x.FirstName} {x.LastName}");
-        Map(x => x.Age).Name("Age").Width(10);
-        Map(x => x.Email).Name("Email").Width(50).Default("EMPTY");
-    }
-}
-```
-
-This library is highly customizable and allows for flexible mapping and formatting of data for easy Excel generation.
-
-</description>
-    <releaseNotes>Initial release</releaseNotes>
-    <tags>excel, xslx, openxml, spreadxheetah, exceldocument, zeytdev</tags>
-  </metadata>
-  <files>
-    <file src="bin\Release\net6.0\**\*.*" target="lib\net6.0\" />
-  </files>
+	<metadata>
+		<id>Zeyt.ExcelDocument</id>
+		<version>1.0.0</version>
+		<authors>zeytdev</authors>
+		<owners>zeytdev</owners>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/zeytdev/Zeyt.ExcelDocument</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Zeyt.ExcelDocument is a C# library that simplifies the creation of Excel documents from object lists...</description>
+		<readme>README.md</readme>
+		<releaseNotes>Initial release</releaseNotes>
+		<tags>excel, xslx, openxml, spreadxheetah, exceldocument, zeytdev</tags>
+	</metadata>
+	<files>
+		<file src="bin\Release\net6.0\**\*.*" target="lib\net6.0\" />
+		<file src="README.md" target="" />
+	</files>
 </package>
