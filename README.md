@@ -1,5 +1,7 @@
 # Zeyt.ExcelDocument
 
+[![Nuget](https://img.shields.io/nuget/v/Zeyt.ExcelDocument?logo=nuget)](https://www.nuget.org/packages/Zeyt.ExcelDocument)
+
 **Zeyt.ExcelDocument** is a powerful and easy-to-use C# library designed for generating Excel documents from object lists. The library allows you to map object properties to Excel columns with custom names, widths, and even default values for fields with missing data. It also provides an easy way to export this data to `.xlsx` format.
 
 ## Features
