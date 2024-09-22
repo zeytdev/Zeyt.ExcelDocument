@@ -2,11 +2,12 @@
 <package>
 	<metadata>
 		<id>Zeyt.ExcelDocument</id>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<authors>zeytdev</authors>
 		<owners>zeytdev</owners>
 		<license type="expression">MIT</license>
 		<projectUrl>https://github.com/zeytdev/Zeyt.ExcelDocument</projectUrl>
+		<repository type="git" url="https://github.com/zeytdev/Zeyt.ExcelDocument.git" />
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Zeyt.ExcelDocument is a C# library that simplifies the creation of Excel documents from object lists...</description>
 		<readme>README.md</readme>
@@ -16,10 +17,18 @@
 			<group targetFramework=".NET6.0">
 				<dependency id="SpreadCheetah" version="1.17.0" />
 			</group>
+			<group targetFramework=".NET7.0">
+				<dependency id="SpreadCheetah" version="1.17.0" />
+			</group>
+			<group targetFramework=".NET8.0">
+				<dependency id="SpreadCheetah" version="1.17.0" />
+			</group>
 		</dependencies>
 	</metadata>
 	<files>
 		<file src="bin\Release\net6.0\**\*.*" target="lib\net6.0\" />
+		<file src="bin\Release\net7.0\**\*.*" target="lib\net7.0\" />
+		<file src="bin\Release\net8.0\**\*.*" target="lib\net8.0\" />
 		<file src="README.md" target="" />
 	</files>
 </package>
